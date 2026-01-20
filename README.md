@@ -1,77 +1,232 @@
+# Proof Simple React + .NET Backend
 
-# Url Shortener API with .NET 9, Aspire, PostgreSQL, Hybrid Cache, and Redis
+A simple full-stack proof of concept combining a **React frontend** with an **ASP.NET Core Web API backend**.
+This project is intended as a technical demonstration of how to structure, run, and integrate a React application with a .NET backend.
 
-This repository showcases a sample API built with .NET 9 that demonstrates the integration of .NET Aspire orchestration. The application utilizes PostgreSQL as database, and Redis for caching.
-## Table of Contents
+---
 
-- [Getting Started](#getting-started)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Support](#support)
+## 📌 Project Overview
 
-## Getting Started
+This repository contains a basic full-stack setup with:
 
-To get a local copy up and running, follow these simple steps.
+* A **React** frontend application
+* A **.NET (ASP.NET Core)** backend API
 
-### Prerequisites
+The goal is to demonstrate:
 
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
-- Docker
+* Frontend and backend separation
+* REST API communication
+* Dependency management with **npm** and **NuGet**
+* Local development setup
 
-### Installation
+---
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/poorna-soysa/url-shortener-app.git
+## 🛠 Tech Stack
+
+### Backend
+
+* ASP.NET Core Web API
+* .NET SDK (6 / 7 / 8)
+* NuGet (package manager)
+
+### Frontend
+
+* React
+* Node.js
+* npm or Yarn
+
+### Other
+
+* Git & GitHub
+
+---
+
+## 📦 Prerequisites
+
+Make sure you have the following installed on your machine:
+
+* **Git**
+  [https://git-scm.com/](https://git-scm.com/)
+
+* **Node.js (LTS recommended)**
+  [https://nodejs.org/](https://nodejs.org/)
+
+* **.NET SDK**
+  [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
+
+Verify installations:
+
+```bash
+git --version
+node --version
+npm --version
+dotnet --version
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/portugalw/proof-simple-react-dotnet-back.git
+cd proof-simple-react-dotnet-back
+```
+
+---
+
+## ⚙️ Backend Setup (ASP.NET Core)
+
+> Adjust folder names if your backend is in a different directory.
+
+### 1. Navigate to the Backend Folder
+
+```bash
+cd backend
+```
+
+### 2. Restore NuGet Packages
+
+```bash
+dotnet restore
+```
+
+This command downloads all required NuGet dependencies defined in the `.csproj` file.
+
+### 3. Build the Project
+
+```bash
+dotnet build
+```
+
+### 4. Run the API
+
+```bash
+dotnet run
+```
+
+The API will typically start at:
+
+* `https://localhost:5001`
+* or `http://localhost:5000`
+
+---
+
+## 📦 Frontend Setup (React)
+
+### 1. Navigate to the Frontend Folder
+
+```bash
+cd frontend
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Start the Development Server
+
+```bash
+npm start
+# or
+yarn start
+```
+
+The React application will be available at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🔄 Running the Full Application
+
+Open **two terminals**:
+
+### Terminal 1 – Backend
+
+```bash
+cd backend
+dotnet run
+```
+
+### Terminal 2 – Frontend
+
+```bash
+cd frontend
+npm start
+```
+
+---
+
+## 📄 API Endpoints
+
+Document your API endpoints here when implemented.
+
+Example:
+
+| Method | Endpoint      | Description       |
+| -----: | ------------- | ----------------- |
+|    GET | `/api/health` | Health check      |
+|    GET | `/api/items`  | List items        |
+|   POST | `/api/items`  | Create a new item |
+
+---
+
+## 🧪 Tests
+
+### Backend Tests
+
+```bash
+dotnet test
+```
+
+### Frontend Tests
+
+```bash
+npm test
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch
+
+   ```bash
+   git checkout -b feature/my-feature
    ```
-2. Navigate to the project directory
-   ```sh
-   cd url-shortener-app
+3. Commit your changes
+
+   ```bash
+   git commit -m "Add my feature"
    ```
-3. Restore dependencies:
-   ```sh
-   dotnet restore
+4. Push to your branch
+
+   ```bash
+   git push origin feature/my-feature
    ```
+5. Open a Pull Request
 
-## Architecture Overview
+---
 
-This template follows the Vertical Slice Architecture, which organizes code by features rather than technical concerns. Each feature is self-contained, promoting high cohesion and low coupling.
+## 📄 License
 
-## Features
+This project is licensed under the **MIT License**.
+See the `LICENSE` file for more information.
 
-- **Built with .NET 9**: Utilizes the latest features for efficient development.
-- **.NET Aspire**: Optimized for cloud-native applications.
-- **PostgreSQL**: Powerful relational database for data storage.
-- **Redis**: Caching solution for improved performance.
-- **Health Check**: Standardized approach for monitoring and assessing the operational status of systems.
+---
 
-## Technologies Used
+## 📬 Contact
 
-- **.NET 9**
-- **.NET Aspire**
-- **PostgreSQL**
-- **Hybrid Cache**
-- **Redis**
-- **EF Core**
-
-## Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Create a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Support
-
-If you find this project helpful, consider buying me a coffee!
-
-[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/poorna.soysa)
+Maintained by **Washington Portugal**
+GitHub: [https://github.com/portugalw](https://github.com/portugalw)
